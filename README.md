@@ -25,10 +25,10 @@ DocMind AI is an intelligent document question-answering system built using a Re
 ## Architecture
 
 ```mermaid
-graph TD
+flowchart TD
     A[Document Upload] --> B[Text Extraction]
-    B --> C[Chunking]
-    C --> D[Sentence Transformers]
+    B --> C[Text Chunking]
+    C --> D[Embedding Generation<br/>Sentence Transformers]
     D --> E[FAISS Vector Store]
     E --> F[Similarity Search]
     F --> G[Llama 3 via Ollama]
