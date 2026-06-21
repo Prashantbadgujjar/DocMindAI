@@ -20,6 +20,21 @@ DocMind AI is an intelligent document question-answering system built using a Re
 * Ollama
 * Llama 3
 
+## WorkFlow
+
+## Architecture
+
+```mermaid
+graph TD
+    A[Document Upload] --> B[Text Extraction]
+    B --> C[Chunking]
+    C --> D[Sentence Transformers]
+    D --> E[FAISS Vector Store]
+    E --> F[Similarity Search]
+    F --> G[Llama 3 via Ollama]
+    G --> H[Answer Generation]
+```
+
 ## Project Structure
 
 ```text
